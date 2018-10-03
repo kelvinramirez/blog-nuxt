@@ -95,6 +95,7 @@ export default {
     axios
       .get("http://40.117.74.54/facebook/api/location/countries")
       .then(response => {
+        console.log(response.data);
         this.countries = response.data.payload.countries;
       })
       .catch(console.log);
