@@ -1,0 +1,31 @@
+<template>
+  <div class="container">
+    <section class="text-center">
+     <v-btn color="success">New post</v-btn>
+    </section>
+
+    <section>
+      <Post_list/>
+    </section>
+  </div>
+
+
+</template>
+
+<script>
+  import Post_list from "@/components/blog/Post_list.vue";
+
+  export default {
+    components: {
+      Post_list
+    },
+    layout: "main_layout"
+
+
+  }
+
+</script>
+
+<style>
+
+</style>

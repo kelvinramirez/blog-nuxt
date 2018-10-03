@@ -6,8 +6,10 @@
 
       <v-card-title primary-title>
         <div>
-          <h3 class="headline mb-0">Kangaroo Valley Safari</h3>
-          <div>Located two hours south of Sydney in the <br>Southern Highlands of New South Wales, ...</div>
+          <h3 class="headline mb-0">{{title}}</h3>
+          <div>
+            {{exerp}}
+          </div>
         </div>
       </v-card-title>
 
@@ -23,7 +25,13 @@
 </template>
 
 <script>
-  export default {};
+  export default {
+props:{
+  title:String,
+  exerp:String
+}
+
+  };
 
 </script>
 

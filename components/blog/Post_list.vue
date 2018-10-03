@@ -2,8 +2,9 @@
   <div>
     <b-row>
 
-      <Post />
-      <Post />
+      <Post title="Primer post" exerp="Esto es el contenido" />
+      <Post title="Segundo post" exerp="Esto es el contenido"/>
+      <Post title="Tercer post" exerp="Esto es el contenido"/>
 
     </b-row>
   </div>
@@ -11,6 +12,7 @@
 <script>
   import Post from "@/components/blog/Post.vue";
   export default {
+    name:"Post_list",
     components: {
       Post
     },
