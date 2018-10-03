@@ -1,38 +1,27 @@
 <template>
-    <div>
-       
+  <div>
+    <b-row>
 
-      <b-row>
+      <Post />
+      <Post />
 
-<Post/>
-<Post/>
-
-
-      </b-row>
-   
-     
-
-
-      
-   
-  
-
-
-    </div>
+    </b-row>
+  </div>
 </template>
 <script>
-import Post from "@/components/blog/Post.vue";
-export default {
-  components: { Post },
-  data() {
-    return {
-      msn: "hola Mundo"
-    };
-  }
-};
+  import Post from "@/components/blog/Post.vue";
+  export default {
+    components: {
+      Post
+    },
+    data() {
+      return {
+        msn: "hola Mundo"
+      };
+    }
+  };
+
 </script>
 
 <style>
 </style>
-
-
