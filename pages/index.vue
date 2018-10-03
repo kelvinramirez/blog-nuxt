@@ -76,7 +76,7 @@
 </template>
 
 <script>
-import Post_list from "@/components/Post_list.vue";
+import Post_list from "@/components/blog/Post_list.vue";
 import axios from "axios";
 export default {
   components: {

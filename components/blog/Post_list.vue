@@ -21,7 +21,7 @@
     </div>
 </template>
 <script>
-import Post from "@/components/layout/blog/Post.vue";
+import Post from "@/components/blog/Post.vue";
 export default {
   components: { Post },
   data() {
