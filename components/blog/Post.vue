@@ -1,14 +1,17 @@
 <template>
   <b-col lg="4">
 
+<nuxt-link :to="'/post/' + id">
+
+
     <v-card>
-      <v-img src="https://cdn.vuetifyjs.com/images/cards/desert.jpg" aspect-ratio="2.75"></v-img>
+      <v-img :src="thumbnail" aspect-ratio="2.75"></v-img>
 
       <v-card-title primary-title>
         <div>
           <h3 class="headline mb-0">{{title}}</h3>
           <div>
-            {{exerp}}
+            {{exerp}}    
           </div>
         </div>
       </v-card-title>
@@ -19,20 +22,22 @@
       </v-card-actions>
     </v-card>
 
+</nuxt-link>
+
   </b-col>
 
 
 </template>
 
 <script>
-  export default {
-props:{
-  title:String,
-  exerp:String
-}
-
-  };
-
+export default {
+  props: {
+    title: String,
+    exerp: String,
+    thumbnail: String,
+    id: String
+  }
+};
 </script>
 
 <style>

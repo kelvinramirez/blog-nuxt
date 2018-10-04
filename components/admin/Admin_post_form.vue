@@ -34,7 +34,7 @@
 
 
     <v-btn type="submit">Submit</v-btn>
-    <!-- <v-btn @click="clear">clear</v-btn> -->
+    <v-btn @click="clear">clear</v-btn>
   </v-form>
 </template>
 
@@ -53,7 +53,10 @@ export default {
   },
   methods: {
     submit: function() {
-      alert(this.editedPost.name);
+      console.log(this.editedPost);
+    },
+    clear: function() {
+      this.$router.push("/");
     }
   }
 };
