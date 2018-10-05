@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <section class="text-center">
-     <v-btn color="success">New post</v-btn>
+     <v-btn color="success" @click="$router.push('/admin/new_post')">New post</v-btn>
     </section>
 
     <section>
@@ -13,19 +13,15 @@
 </template>
 
 <script>
-  import Post_list from "@/components/blog/Post_list.vue";
+import Post_list from "@/components/blog/Post_list.vue";
 
-  export default {
-    components: {
-      Post_list
-    },
-    layout: "main_layout"
-
-
-  }
-
+export default {
+  components: {
+    Post_list
+  },
+  layout: "main_layout"
+};
 </script>
 
 <style>
-
 </style>

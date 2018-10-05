@@ -9,6 +9,7 @@
        <v-btn flat><nuxt-link to="/post">Posts</nuxt-link></v-btn>
       <v-btn flat><nuxt-link to="/about">Nosotros</nuxt-link></v-btn>
       <v-btn flat> <nuxt-link to="/contacts">Contactos</nuxt-link> </v-btn>
+       <v-btn flat> <nuxt-link to="/admin">Admin</nuxt-link> </v-btn>
     </v-toolbar-items>
   </v-toolbar>
 </div>

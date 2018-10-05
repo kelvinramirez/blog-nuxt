@@ -52,8 +52,9 @@ export default {
     };
   },
   methods: {
-    submit: function() {
-      console.log(this.editedPost);
+    submit: function(event) {
+      //   console.log(this.editedPost);
+      this.$emit("form_data", this.editedPost);
     },
     clear: function() {
       this.$router.push("/");
