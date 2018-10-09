@@ -6,7 +6,7 @@
 
 
 
-    <Post_list />
+    <Post_list/>
 
     <form>
       <input type="text" v-model="id_user">
