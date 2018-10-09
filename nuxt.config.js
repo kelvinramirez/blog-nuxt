@@ -40,12 +40,12 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: ["~/plugins/vuetify", "~/plugins/vue-boostrap", "~/plugins/axios"],
+  plugins: ["~/plugins/vuetify", "~/plugins/vue-boostrap"],
   //
   /*
   ** Nuxt.js modules
   */
-  modules: [],
+  modules: ["@nuxtjs/axios"],
 
   /*
   ** Build configuration
