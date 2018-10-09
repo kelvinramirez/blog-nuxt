@@ -5,7 +5,7 @@
     </section>
 
     <section>
-      <Post_list/>
+      <Post_list isAdmin/>
     </section>
   </div>
 

@@ -1,7 +1,7 @@
 <template>
   <b-col lg="4">
 
-<nuxt-link :to="'/post/' + id">
+<nuxt-link :to="postLink">
 
 
     <v-card>
@@ -35,7 +35,16 @@ export default {
     title: String,
     exerp: String,
     thumbnail: String,
-    id: String
+    id: String,
+    isAdmin: {
+      type: Boolean,
+      required: true
+    }
+  },
+  computed: {
+    postLink() {
+      return this.isAdmin ? "/admin/" + this.id : "/post/" + this.id;
+    }
   }
 };
 </script>
