@@ -8,8 +8,8 @@
       <v-card-title primary-title>
         <div>
           <h3 class="headline mb-0">{{title}}</h3>
-          <div>
-            {{exerp}}    
+          <div v-html="exerp">
+            
           </div>
         </div>
       </v-card-title>

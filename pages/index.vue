@@ -95,10 +95,10 @@ export default {
       .catch(console.log);
 
     this.$axios
-      .$get("http://localhost/induserv/wp-json/wp/v2/posts")
+      .$get("http://localhost:8888/xpertcode/wp-json/wp/v2/posts")
       .then(response => {
-        debugger;
-        console.log(response[1]._links.attachment);
+        // debugger;
+        console.log(response);
         this.posts_loaded = response;
       })
       .catch(console.log);

@@ -7,8 +7,8 @@
       :key="post.id"
       :is-admin="isAdmin" 
       :title="post.title.rendered" 
-      :exerp="post.exerp" 
-      :thumbnail="post._links" 
+      :exerp="post.content.rendered" 
+      :thumbnail="post.fimg_url" 
       :id="post.id"/>
      
     </b-row>
