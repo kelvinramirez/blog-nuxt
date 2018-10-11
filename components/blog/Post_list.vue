@@ -6,12 +6,11 @@
       v-for="post in posts"
       :key="post.id"
       :is-admin="isAdmin" 
-      :title="post.title" 
+      :title="post.title.rendered" 
       :exerp="post.exerp" 
-      :thumbnail="post.thumbnail" 
+      :thumbnail="post._links" 
       :id="post.id"/>
      
-
     </b-row>
   </div>
 </template>

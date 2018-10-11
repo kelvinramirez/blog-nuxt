@@ -20,9 +20,6 @@
       </v-card-actions>
     </v-card>
 
-<img :src="img_k" alt="">
-
-  {{img}}
 
 </nuxt-link>
 
@@ -37,17 +34,14 @@ export default {
     title: String,
     exerp: String,
     thumbnail: String,
-    id: String,
+    id: Number,
     isAdmin: {
       type: Boolean,
       required: true
     }
   },
   data() {
-    return {
-      // img_k: "/image/xpert.jpeg"
-      img_k: "_nuxt/assets/image/xpert.jpeg"
-    };
+    return {};
   },
   computed: {
     postLink() {

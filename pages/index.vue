@@ -3,7 +3,7 @@
 
   <b-container>
 
-    <Post_list :posts="posts_loaded" />
+    <Post_list :posts="posts_loaded"/>
 
     <form>
       <input type="text" v-model="id_user">
@@ -11,7 +11,7 @@
       <p>{{id_user}}</p>
     </form>
 
-<h1>hola Jeancarlos</h1>
+<h1>hola Jeancarlos re</h1>
 
     <hr>
 
@@ -27,7 +27,7 @@
 
       <select name="" id="" @change="getCities" v-model="selected">
 
-        <option v-for="(item, key) in countries" :value="item.Key">{{item.Name}}</option>
+        <option v-for="(item, key) in countries" :value="item.Key" :key="key">{{item.Name}}</option>
 
       </select>
 
@@ -81,48 +81,44 @@ export default {
       id_user: "",
       countries: [],
       cities: [],
-      posts_loaded: [
-        {
-          id: "1",
-          thumbnail: "https://cdn.vuetifyjs.com/images/cards/desert.jpg",
-          title: "primer post",
-          exerp: "Este es el contenido"
-        },
-        {
-          id: "2",
-          thumbnail: "https://cdn.vuetifyjs.com/images/cards/desert.jpg",
-          title: "primer post",
-          exerp: "Este es el contenido"
-        }
-      ]
+      posts_loaded: [],
+      link_kelvin: ""
     };
+  },
+  created() {
+    this.$axios
+      .$get("http://40.117.74.54/facebook/api/location/countries")
+      .then(response => {
+        // console.log(response);
+        this.countries = response.payload.countries;
+      })
+      .catch(console.log);
+
+    this.$axios
+      .$get("http://localhost/induserv/wp-json/wp/v2/posts")
+      .then(response => {
+        debugger;
+        console.log(response[1]._links.attachment);
+        this.posts_loaded = response;
+      })
+      .catch(console.log);
+  },
+  methods: {
+    User_url() {
+      this.$router.push("/post/" + this.id_user);
+    },
+    getCities() {
+      this.$axios
+        .$get(
+          "http://40.117.74.54/facebook/api/location/cities/" + this.selected
+        )
+        .then(response => {
+          this.cities = [];
+          this.cities = response.payload.cities;
+        })
+        .catch(console.log);
+    }
   }
-  // ,
-  // created() {
-  //   this.$axios
-  //     .$get("http://40.117.74.54/facebook/api/location/countries")
-  //     .then(response => {
-  //       // console.log(response);
-  //       this.countries = response.payload.countries;
-  //     })
-  //     .catch(console.log);
-  // },
-  // methods: {
-  //   User_url() {
-  //     this.$router.push("/post/" + this.id_user);
-  //   },
-  //   getCities() {
-  //     this.$axios
-  //       .$get(
-  //         "http://40.117.74.54/facebook/api/location/cities/" + this.selected
-  //       )
-  //       .then(response => {
-  //         this.cities = [];
-  //         this.cities = response.payload.cities;
-  //       })
-  //       .catch(console.log);
-  //   }
-  // }
 };
 </script>
 
