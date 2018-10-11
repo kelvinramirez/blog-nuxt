@@ -2,9 +2,15 @@
   <div>
     <b-row>
 
-      <Post :is-admin="isAdmin" title="Primer post" exerp="Esto es el contenido" thumbnail="https://cdn.vuetifyjs.com/images/cards/desert.jpg" id="1" />
-      <Post :is-admin="isAdmin" title="Segundo post" exerp="Esto es el contenido" thumbnail="https://cdn.vuetifyjs.com/images/cards/desert.jpg" id="2"/>
-      <Post :is-admin="isAdmin" title="Tercer post" exerp="Esto es el contenido" thumbnail="https://cdn.vuetifyjs.com/images/cards/desert.jpg" id="3"/>
+      <Post
+      v-for="post in posts"
+      :key="post.id"
+      :is-admin="isAdmin" 
+      :title="post.title" 
+      :exerp="post.exerp" 
+      :thumbnail="post.thumbnail" 
+      :id="post.id"/>
+     
 
     </b-row>
   </div>
@@ -20,6 +26,10 @@ export default {
     isAdmin: {
       type: Boolean,
       default: false
+    },
+    posts: {
+      type: Array,
+      require: true
     }
   },
   data() {

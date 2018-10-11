@@ -3,27 +3,17 @@
 
   <b-container>
 
-
-
-
-    <Post_list/>
+    <Post_list :posts="posts_loaded" />
 
     <form>
       <input type="text" v-model="id_user">
       <input type="submit" value="enviar">
-
       <p>{{id_user}}</p>
     </form>
 
-
-
     <hr>
 
-
     <v-form ref="form">
-
-
-
 
       <!-- <v-select @change="test"
       v-model="select"
@@ -88,7 +78,21 @@ export default {
       selected: "DO",
       id_user: "",
       countries: [],
-      cities: []
+      cities: [],
+      posts_loaded: [
+        {
+          id: "1",
+          thumbnail: "https://cdn.vuetifyjs.com/images/cards/desert.jpg",
+          title: "primer post",
+          exerp: "Este es el contenido"
+        },
+        {
+          id: "2",
+          thumbnail: "https://cdn.vuetifyjs.com/images/cards/desert.jpg",
+          title: "primer post",
+          exerp: "Este es el contenido"
+        }
+      ]
     };
   },
   created() {
