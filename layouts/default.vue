@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1>Este es mi layout por defaul</h1>
     <nuxt/>
   </div>
 </template>

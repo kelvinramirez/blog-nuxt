@@ -11,6 +11,8 @@
       <p>{{id_user}}</p>
     </form>
 
+<h1>hola Jeancarlos</h1>
+
     <hr>
 
     <v-form ref="form">
@@ -67,7 +69,7 @@
 
 <script>
 import Post_list from "@/components/blog/Post_list.vue";
-import axios from "axios";
+// import axios from "axios";
 export default {
   components: {
     Post_list
@@ -94,31 +96,33 @@ export default {
         }
       ]
     };
-  },
-  created() {
-    axios
-      .get("http://40.117.74.54/facebook/api/location/countries")
-      .then(response => {
-        this.countries = response.data.payload.countries;
-      })
-      .catch(console.log);
-  },
-  methods: {
-    User_url() {
-      this.$router.push("/post/" + this.id_user);
-    },
-    getCities() {
-      axios
-        .get(
-          "http://40.117.74.54/facebook/api/location/cities/" + this.selected
-        )
-        .then(response => {
-          this.cities = [];
-          this.cities = response.data.payload.cities;
-        })
-        .catch(console.log);
-    }
   }
+  // ,
+  // created() {
+  //   this.$axios
+  //     .$get("http://40.117.74.54/facebook/api/location/countries")
+  //     .then(response => {
+  //       // console.log(response);
+  //       this.countries = response.payload.countries;
+  //     })
+  //     .catch(console.log);
+  // },
+  // methods: {
+  //   User_url() {
+  //     this.$router.push("/post/" + this.id_user);
+  //   },
+  //   getCities() {
+  //     this.$axios
+  //       .$get(
+  //         "http://40.117.74.54/facebook/api/location/cities/" + this.selected
+  //       )
+  //       .then(response => {
+  //         this.cities = [];
+  //         this.cities = response.payload.cities;
+  //       })
+  //       .catch(console.log);
+  //   }
+  // }
 };
 </script>
 

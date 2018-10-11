@@ -4,21 +4,31 @@ module.exports = {
   mode: "universal",
 
   /*
-  ** Headers of the page
-  */
+   ** Headers of the page
+   */
   head: {
     title: pkg.name,
-    meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: pkg.description }
+    meta: [{
+        charset: "utf-8"
+      },
+      {
+        name: "viewport",
+        content: "width=device-width, initial-scale=1"
+      },
+      {
+        hid: "description",
+        name: "description",
+        content: pkg.description
+      }
     ],
-    link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+    link: [{
+        rel: "icon",
+        type: "image/x-icon",
+        href: "/favicon.ico"
+      },
       {
         rel: "stylesheet",
-        href:
-          "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"
+        href: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"
       },
       {
         rel: "stylesheet",
@@ -28,32 +38,34 @@ module.exports = {
   },
 
   /*
-  ** Customize the progress-bar color
-  */
-  loading: { color: "#fff" },
+   ** Customize the progress-bar color
+   */
+  loading: {
+    color: "#fff"
+  },
 
   /*
-  ** Global CSS
-  */
+   ** Global CSS
+   */
   css: ["~/assets/css/main.css"],
 
   /*
-  ** Plugins to load before mounting the App
-  */
-  plugins: ["~/plugins/vuetify", "~/plugins/vue-boostrap", "~/plugins/axios"],
+   ** Plugins to load before mounting the App
+   */
+  plugins: ["~/plugins/vuetify", "~/plugins/vue-boostrap"],
   //
   /*
-  ** Nuxt.js modules
-  */
-  modules: [],
+   ** Nuxt.js modules
+   */
+  modules: ["@nuxtjs/axios"],
 
   /*
-  ** Build configuration
-  */
+   ** Build configuration
+   */
   build: {
     /*
-    ** You can extend webpack config here
-    */
+     ** You can extend webpack config here
+     */
     extend(config, ctx) {}
   }
 };

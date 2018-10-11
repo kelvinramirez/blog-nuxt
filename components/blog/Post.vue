@@ -3,10 +3,8 @@
 
 <nuxt-link :to="postLink">
 
-
     <v-card>
       <v-img :src="thumbnail" aspect-ratio="2.75"></v-img>
-
       <v-card-title primary-title>
         <div>
           <h3 class="headline mb-0">{{title}}</h3>
@@ -21,6 +19,10 @@
         <v-btn flat color="orange">Explore</v-btn>
       </v-card-actions>
     </v-card>
+
+<img :src="img_k" alt="">
+
+  {{img}}
 
 </nuxt-link>
 
@@ -40,6 +42,12 @@ export default {
       type: Boolean,
       required: true
     }
+  },
+  data() {
+    return {
+      // img_k: "/image/xpert.jpeg"
+      img_k: "_nuxt/assets/image/xpert.jpeg"
+    };
   },
   computed: {
     postLink() {
