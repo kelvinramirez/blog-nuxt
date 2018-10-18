@@ -11,7 +11,6 @@
       <p>{{id_user}}</p>
     </form>
 
-<h1>hola Jeancarlos re</h1>
 
     <hr>
 
